@@ -1,0 +1,13 @@
+
+name: 'tcc-data-mining-2024'
+
+services:
+  spark:
+    container_name: spark-cluster
+    image: quay.io/jupyter/pyspark-notebook:spark-3.5.3
+    volumes:
+      - ./notebooks:/home/jovyan/notebooks
+      - ./data:/home/jovyan/data
+    ports:
+      - 4040:4040
+      - 8888:8888
